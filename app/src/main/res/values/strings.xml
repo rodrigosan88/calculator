@@ -20,6 +20,22 @@
     <string name="btn_percentage">%</string>
     <string name="btn_plusMinus">+/-</string>
     <string name="btn_clear">C</string>
-    <string name="btn_coma">,</string>
+    <string name="btn_comma">,</string>
+    <string name="btn_dot">.</string>
+    <string name="btn_sin">sin(x)</string>
+    <string name="btn_cos">cos(x)</string>
+    <string name="btn_tg">tg(x)</string>
+    <string name="btn_ln">ln(x)</string>
+    <string name="btn_asin">asin(x)</string>
+    <string name="btn_acos">acos(x)</string>
+    <string name="btn_atg">atg(x)</string>
+    <string name="btn_log">log(x)</string>
+    <string name="btn_factorial">n!</string>
+    <string name="btn_openPar">(</string>
+    <string name="btn_closePar">)</string>
+    <string name="btn_exp">x^y</string>
+    <string name="btn_exp2">x^2</string>
+    <string name="btn_sqrt">√</string>
+
 
 </resources>

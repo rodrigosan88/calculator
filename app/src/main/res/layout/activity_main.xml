@@ -19,6 +19,144 @@
             android:layout_height="match_parent">
 
             <Button
+                android:id="@+id/btnOpenPar"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="operationInput"
+                android:tag="PARENTHESIS_OPEN"
+                android:text="@string/btn_openPar" />
+
+            <Button
+                android:id="@+id/btnClosePar"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="operationInput"
+                android:tag="PARENTHESIS_CLOSE"
+                android:text="@string/btn_closePar" />
+
+            <Button
+                android:id="@+id/btnFactorial"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="operationInput"
+                android:tag="FACTORIAL"
+                android:text="@string/btn_factorial" />
+
+            <Button
+                android:id="@+id/btnSquareRoot"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="operationInput"
+                android:tag="SQUARE_ROOT"
+                android:text="@string/btn_sqrt" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btnASin"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="operationInput"
+                android:tag="ASIN"
+                android:text="@string/btn_asin" />
+
+            <Button
+                android:id="@+id/btnACos"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="operationInput"
+                android:tag="ACOS"
+                android:text="@string/btn_acos" />
+
+            <Button
+                android:id="@+id/btnATg"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="operationInput"
+                android:tag="ATG"
+                android:text="@string/btn_atg" />
+
+            <Button
+                android:id="@+id/btnLog"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="operationInput"
+                android:tag="LOG"
+                android:text="@string/btn_log" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btnSin"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="operationInput"
+                android:tag="SIN"
+                android:text="@string/btn_sin" />
+
+            <Button
+                android:id="@+id/btnCos"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="operationInput"
+                android:tag="COS"
+                android:text="@string/btn_cos" />
+
+            <Button
+                android:id="@+id/btnTg"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="operationInput"
+                android:tag="TG"
+                android:text="@string/btn_tg" />
+
+            <Button
+                android:id="@+id/btnLn"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="operationInput"
+                android:tag="LN"
+                android:text="@string/btn_ln" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
                 android:id="@+id/btnClear"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
@@ -50,7 +188,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:onClick="numberInput"
+                android:onClick="operationInput"
+                android:tag="DIVISION"
                 android:text="@string/btn_division" />
         </TableRow>
 
@@ -65,6 +204,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="numberInput"
+                android:tag="SEVEN"
                 android:text="@string/btn_seven" />
 
             <Button
@@ -74,6 +214,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="numberInput"
+                android:tag="EIGHT"
                 android:text="@string/btn_eight" />
 
             <Button
@@ -83,6 +224,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="numberInput"
+                android:tag="NINE"
                 android:text="@string/btn_nine" />
 
             <Button
@@ -91,7 +233,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:onClick="numberInput"
+                android:onClick="operationInput"
+                android:tag="MULTIPLICATION"
                 android:text="@string/btn_multiplication" />
         </TableRow>
 
@@ -106,6 +249,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="numberInput"
+                android:tag="FOUR"
                 android:text="@string/btn_four" />
 
             <Button
@@ -115,6 +259,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="numberInput"
+                android:tag="FIVE"
                 android:text="@string/btn_five" />
 
             <Button
@@ -124,6 +269,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="numberInput"
+                android:tag="SIX"
                 android:text="@string/btn_six" />
 
             <Button
@@ -132,7 +278,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:onClick="numberInput"
+                android:onClick="operationInput"
+                android:tag="SUBTRACTION"
                 android:text="@string/btn_subtraction" />
         </TableRow>
 
@@ -147,6 +294,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="numberInput"
+                android:tag="ONE"
                 android:text="@string/btn_one" />
 
             <Button
@@ -156,6 +304,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="numberInput"
+                android:tag="TWO"
                 android:text="@string/btn_two" />
 
             <Button
@@ -165,6 +314,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="numberInput"
+                android:tag="THREE"
                 android:text="@string/btn_three" />
 
             <Button
@@ -173,7 +323,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:onClick="numberInput"
+                android:onClick="operationInput"
+                android:tag="ADDITION"
                 android:text="@string/btn_addition" />
         </TableRow>
 
@@ -188,6 +339,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="numberInput"
+                android:tag="ZERO"
                 android:text="@string/btn_zero" />
 
             <Button
@@ -197,7 +349,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="numberInput"
-                android:text="@string/btn_coma" />
+                android:tag="DOT"
+                android:text="@string/btn_dot" />
 
             <Button
                 android:id="@+id/btnEquals"
@@ -214,6 +367,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="backspace"
                 app:icon="@drawable/ic_baseline_backspace_24"
                 app:iconGravity="textStart"
                 app:iconPadding="0dp" />
@@ -221,12 +375,16 @@
         </TableRow>
     </TableLayout>
 
-    <EditText
-        android:id="@+id/inpExpression"
+    <TextView
+        android:id="@+id/tvDisplay"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="number"
+        android:layout_height="0dp"
+        android:gravity="bottom"
+        android:text="0"
+        android:textAlignment="viewEnd"
+        android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/tableLayout"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
