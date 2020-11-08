@@ -11,6 +11,7 @@ enum class OperationsEnum(val operation: String) {
     MODULUS("#"),
     EXPONENTIATION("^"),
     EXPONENTIATION_2("^2"),
+    EXPONENTIATION_INV("^-1"),
     LOG("log2("),
     SIN("sin("),
     COS("cos("),
@@ -21,6 +22,7 @@ enum class OperationsEnum(val operation: String) {
     LN("ln("),
     PARENTHESIS_OPEN("("),
     PARENTHESIS_CLOSE(")"),
-    EQUALS("=")
+    EQUALS("="),
+    PERCENTAGE("%")
     
 }

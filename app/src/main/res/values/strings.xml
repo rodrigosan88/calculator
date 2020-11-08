@@ -14,7 +14,7 @@
     <!--simple operators-->
     <string name="btn_addition">+</string>
     <string name="btn_subtraction">-</string>
-    <string name="btn_multiplication">X</string>
+    <string name="btn_multiplication">×</string>
     <string name="btn_division">÷</string>
     <string name="btn_equals">=</string>
     <string name="btn_percentage">%</string>
@@ -26,16 +26,18 @@
     <string name="btn_cos">cos(x)</string>
     <string name="btn_tg">tg(x)</string>
     <string name="btn_ln">ln(x)</string>
-    <string name="btn_asin">asin(x)</string>
-    <string name="btn_acos">acos(x)</string>
-    <string name="btn_atg">atg(x)</string>
+    <string name="btn_asin">arcsin(x)</string>
+    <string name="btn_acos">arccos(x)</string>
+    <string name="btn_atg">arctg(x)</string>
     <string name="btn_log">log(x)</string>
     <string name="btn_factorial">n!</string>
     <string name="btn_openPar">(</string>
     <string name="btn_closePar">)</string>
     <string name="btn_exp">x^y</string>
     <string name="btn_exp2">x^2</string>
+    <string name="btn_expInv">x^-1</string>
     <string name="btn_sqrt">√</string>
+    <string name="btn_modulus">mod</string>
 
 
 </resources>

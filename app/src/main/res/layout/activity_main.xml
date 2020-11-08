@@ -39,24 +39,75 @@
                 android:text="@string/btn_closePar" />
 
             <Button
-                android:id="@+id/btnFactorial"
+                android:id="@+id/btnClear"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:onClick="operationInput"
-                android:tag="FACTORIAL"
-                android:text="@string/btn_factorial" />
+                android:backgroundTint="#FFFFFF"
+                android:onClick="clear"
+                android:text="@string/btn_clear" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDelete"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="backspace"
+                app:icon="@drawable/ic_baseline_backspace_24"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/btnSquareRoot"
+                android:id="@+id/btnExp"
                 style="?android:attr/buttonBarButtonStyle"
+                android:textAllCaps="false"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="operationInput"
-                android:tag="SQUARE_ROOT"
-                android:text="@string/btn_sqrt" />
+                android:tag="EXPONENTIATION"
+                android:text="@string/btn_exp" />
+
+            <Button
+                android:id="@+id/btnExp2"
+                style="?android:attr/buttonBarButtonStyle"
+                android:textAllCaps="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="operationInput"
+                android:tag="EXPONENTIATION_2"
+                android:text="@string/btn_exp2" />
+
+            <Button
+                android:id="@+id/btnExpInv"
+                style="?android:attr/buttonBarButtonStyle"
+                android:textAllCaps="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="operationInput"
+                android:tag="EXPONENTIATION_INV"
+                android:text="@string/btn_expInv" />
+
+            <Button
+                android:id="@+id/btnModulus"
+                style="?android:attr/buttonBarButtonStyle"
+                android:textAllCaps="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="operationInput"
+                android:tag="MODULUS"
+                android:text="@string/btn_modulus" />
 
         </TableRow>
 
@@ -67,6 +118,7 @@
             <Button
                 android:id="@+id/btnASin"
                 style="?android:attr/buttonBarButtonStyle"
+                android:textAllCaps="false"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -77,6 +129,7 @@
             <Button
                 android:id="@+id/btnACos"
                 style="?android:attr/buttonBarButtonStyle"
+                android:textAllCaps="false"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -87,6 +140,7 @@
             <Button
                 android:id="@+id/btnATg"
                 style="?android:attr/buttonBarButtonStyle"
+                android:textAllCaps="false"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -97,6 +151,7 @@
             <Button
                 android:id="@+id/btnLog"
                 style="?android:attr/buttonBarButtonStyle"
+                android:textAllCaps="false"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -113,6 +168,7 @@
             <Button
                 android:id="@+id/btnSin"
                 style="?android:attr/buttonBarButtonStyle"
+                android:textAllCaps="false"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -123,6 +179,7 @@
             <Button
                 android:id="@+id/btnCos"
                 style="?android:attr/buttonBarButtonStyle"
+                android:textAllCaps="false"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -133,6 +190,7 @@
             <Button
                 android:id="@+id/btnTg"
                 style="?android:attr/buttonBarButtonStyle"
+                android:textAllCaps="false"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -143,6 +201,7 @@
             <Button
                 android:id="@+id/btnLn"
                 style="?android:attr/buttonBarButtonStyle"
+                android:textAllCaps="false"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -157,13 +216,15 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/btnClear"
+                android:id="@+id/btnFactorial"
                 style="?android:attr/buttonBarButtonStyle"
+                android:textAllCaps="false"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:onClick="clear"
-                android:text="@string/btn_clear" />
+                android:onClick="operationInput"
+                android:tag="FACTORIAL"
+                android:text="@string/btn_factorial" />
 
             <Button
                 android:id="@+id/btnPlusMinus"
@@ -171,19 +232,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="invertSign"
                 android:text="@string/btn_plusMinus" />
 
             <Button
-                android:id="@+id/btnPercentage"
+                android:id="@+id/btnPercent"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:onClick="numberInput"
+                android:onClick="operationInput"
+                android:tag="PERCENTAGE"
                 android:text="@string/btn_percentage" />
 
             <Button
-                android:id="@+id/button4"
+                android:id="@+id/btnDivision"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -191,6 +254,7 @@
                 android:onClick="operationInput"
                 android:tag="DIVISION"
                 android:text="@string/btn_division" />
+
         </TableRow>
 
         <TableRow
@@ -361,16 +425,15 @@
                 android:onClick="eval"
                 android:text="@string/btn_equals" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnDelete"
+            <Button
+                android:id="@+id/btnSquareRoot"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:onClick="backspace"
-                app:icon="@drawable/ic_baseline_backspace_24"
-                app:iconGravity="textStart"
-                app:iconPadding="0dp" />
+                android:onClick="operationInput"
+                android:tag="SQUARE_ROOT"
+                android:text="@string/btn_sqrt" />
 
         </TableRow>
     </TableLayout>
@@ -379,12 +442,35 @@
         android:id="@+id/tvDisplay"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:gravity="bottom"
-        android:text="0"
-        android:textAlignment="viewEnd"
-        android:textSize="30sp"
+        android:gravity="bottom|end"
+        android:textSize="32sp"
         app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvHistory"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="bottom|end"
+        android:lines="11"
+        android:maxLines="11"
+        android:minLines="11"
+        android:scrollHorizontally="true"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/tvExpression"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvExpression"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:gravity="bottom|end"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvDisplay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
