@@ -2,6 +2,7 @@ package br.com.rsms.calculator
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.method.ScrollingMovementMethod
 import android.view.View
 import android.view.WindowManager
 import android.widget.TextView
@@ -23,7 +24,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         this.calculatorDisplay = findViewById(R.id.tvDisplay)
         this.calculatorHistory = findViewById(R.id.tvHistory)
+        this.calculatorHistory!!.movementMethod = ScrollingMovementMethod()
         this.calculatorExpression = findViewById(R.id.tvExpression)
+        initBackspaceClickPressListener();
+        initClearLongClickListener();
+
         mXparser.setDegreesMode()
     }
 
@@ -107,9 +112,15 @@ class MainActivity : AppCompatActivity() {
             // Eval expression
             val expression: Expression = Expression(this.calculatorExpression!!.text.toString())
             val result = expression.calculate()
+            var resultStr: String = ""
+            if(result.isNaN()){
+                resultStr = "ERROR"
+            } else {
+                resultStr = "$result"
+            }
             // Display result
-            this.calculatorExpression!!.append(" = $result")
-            this.calculatorDisplay!!.text = "$result"
+            this.calculatorExpression!!.append(" = $resultStr")
+            this.calculatorDisplay!!.text = "$resultStr"
             // Update calculator history
             this.evaluated = true;
             this.calculatorHistory!!.append(this.calculatorExpression!!.text.toString() + "\n")
@@ -128,12 +139,22 @@ class MainActivity : AppCompatActivity() {
     private fun sanitizeExpression(expression: String): String{
         var sanitizedExpression = expression
 
-        //TODO: Add sanitation logic here
-//        if(expression.count{"(".contains(it)} == 1 && expression.count{"(".contains(it)} < 1) {
-//            sanitizedExpression = "$expression)"
-//        }
+        val openingParenthesis = expression.count{"(".contains(it)}
+        val closingParenthesis = expression.count{")".contains(it)}
+
+        for (i in 1..openingParenthesis - closingParenthesis step 1) {
+            sanitizedExpression = "$sanitizedExpression)"
+        }
 
         return sanitizedExpression
+    }
+
+    private fun initBackspaceClickPressListener() {
+        
+    }
+
+    private fun initClearLongClickListener() {
+
     }
 
 }

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Calculator</string>
+    <string name="app_name">RSMS Calculator</string>
     <!--numbers-->
     <string name="btn_one">1</string>
     <string name="btn_two">2</string>
